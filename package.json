@@ -1,6 +1,9 @@
 {
 	"name": "get-palette",
 	"version": "0.0.0",
+	"main": "dist/main.js",
+	"types": "dist/main.d.ts",
+	"module": "dist/main.mjs",
 	"description": "Get the dominant color or color palette from an image.",
 	"keywords": ["color", "palette", "sampling", "image", "picture"],
 	"homepage": "https://github.com/BlankParticle/get-palette",
@@ -8,8 +11,19 @@
 		"type": "git",
 		"url": "https://github.com/BlankParticle/get-palette"
 	},
+	"author": "BlankParticle",
+	"files": ["dist"],
+	"exports": {
+		".": {
+			"import": "./dist/main.mjs",
+			"require": "./dist/main.js",
+			"types": "./dist/main.d.ts"
+		}
+	},
 	"license": "MIT",
 	"scripts": {
+		"dev": "tsup --watch",
+		"build": "tsup",
 		"format": "biome format --write ./src",
 		"lint": "biome check ./src",
 		"fix": "biome check --apply ./src"
@@ -22,6 +36,10 @@
 	"devDependencies": {
 		"@biomejs/biome": "^1.5.1",
 		"@types/ndarray": "^1.0.14",
-		"@types/pngjs": "^6.0.4"
-	}
+		"@types/node": "^20.11.0",
+		"@types/pngjs": "^6.0.4",
+		"tsup": "^8.0.1",
+		"typescript": "^5.3.3"
+	},
+	"packageManager": "pnpm@8.14.1"
 }
