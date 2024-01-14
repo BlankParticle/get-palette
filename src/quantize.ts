@@ -157,7 +157,7 @@ class CMap {
   }
 
   public palette() {
-    return this.vBoxes.map(({ color }) => color);
+    return Array.from(this.vBoxes.map(({ color }) => color));
   }
 
   public get size() {
@@ -373,10 +373,10 @@ const quantize = (pixels: RgbTuple[], maxColors: number) => {
       }
 
       // do the cut
-      const vbox2 = medianCutApply(histogram, vbox)[1];
-      pq.push(vbox);
+      const [vbox1, vbox2] = medianCutApply(histogram, vbox);
+      pq.push(vbox1);
       if (vbox2) {
-        pq.push(vbox);
+        pq.push(vbox2);
         nColors++;
       }
     }
