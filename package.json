@@ -1,0 +1,27 @@
+{
+	"name": "get-palette",
+	"version": "0.0.0",
+	"description": "Get the dominant color or color palette from an image.",
+	"keywords": ["color", "palette", "sampling", "image", "picture"],
+	"homepage": "https://github.com/BlankParticle/get-palette",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/BlankParticle/get-palette"
+	},
+	"license": "MIT",
+	"scripts": {
+		"format": "biome format --write ./src",
+		"lint": "biome check ./src",
+		"fix": "biome check --apply ./src"
+	},
+	"dependencies": {
+		"jpeg-js": "^0.4.4",
+		"ndarray": "^1.0.19",
+		"pngjs": "^7.0.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.5.1",
+		"@types/ndarray": "^1.0.14",
+		"@types/pngjs": "^6.0.4"
+	}
+}
