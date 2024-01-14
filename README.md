@@ -109,7 +109,13 @@ We will review your changes and merge them if everything looks good.
 
 ### 💸 Sponsorship
 
-If you find this plugin useful, please consider [sponsoring me](https://github.com/sponsors/BlankParticle). This will help me spend more time on these projects.
+If you find this package useful, please consider [sponsoring me](https://github.com/sponsors/BlankParticle). This will help me spend more time on these projects.
+
+## 📝 Credits
+
+This Project is a modernized version of [Color Thief](https://github.com/lokesh/color-thief).
+
+Also it's dependencies like [quantize](https://github.com/lokesh/quantize) and [get-pixels](https://github.com/scijs/get-pixels) has been also ported to modern JS syntax.
 
 ## 📜 License
 
